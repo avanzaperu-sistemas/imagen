@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanza Perú - Expertos en Fachadas y Gran Formato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Actualización de Font Awesome para soporte de nuevos iconos como X-Twitter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .bg-avanza-red { background-color: #D32F2F; }
+        .text-avanza-red { color: #D32F2F; }
+        .bg-avanza-dark { background-color: #1A1A1A; }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        /* Estilo para el menú móvil */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Barra Superior -->
+    <div class="bg-avanza-red text-white py-2 text-[10px] md:text-sm px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex space-x-3 md:space-x-4">
+                <span><i class="fas fa-phone mr-1"></i> 904 499 441</span>
+                <span class="hidden sm:inline"><i class="fas fa-envelope mr-1"></i> informes@avanzaperu.com</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:underline">Inicio</a>
+                <a href="#" class="hover:underline">Términos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación Responsiva -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="logo">
+                    <img src="https://avanzaperu.com/site/imagenes/logo_avanza_p.svg" class="w-32 md:w-40" alt="Avanza Perú Logo">
+                </div>
+            </div>
+            
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex space-x-8 font-semibold text-gray-700">
+                <a href="#especialidades" class="hover:text-avanza-red transition">Servicios</a>
+                <a href="#tecnologia" class="hover:text-avanza-red transition">Tecnología</a>
+                <a href="#galeria" class="hover:text-avanza-red transition">Galería</a>
+                <a href="#contacto" class="hover:text-avanza-red transition">Contáctanos</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/51904499441" class="hidden sm:flex bg-avanza-red text-white px-4 py-2 rounded-full font-bold text-xs md:text-sm items-center hover:bg-red-700 transition">
+                    <i class="fab fa-whatsapp mr-2"></i> COTIZAR
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t px-4">
+            <div class="flex flex-col space-y-4 py-6 font-semibold text-gray-700">
+                <a href="#especialidades" class="mobile-link hover:text-avanza-red">Servicios</a>
+                <a href="#tecnologia" class="mobile-link hover:text-avanza-red">Tecnología</a>
+                <a href="#galeria" class="mobile-link hover:text-avanza-red">Galería</a>
+                <a href="#contacto" class="mobile-link hover:text-avanza-red">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header class="hero-gradient text-white py-20 md:py-40 px-6">
+        <div class="max-w-7xl mx-auto text-center md:text-left">
+            <span class="bg-avanza-red px-3 py-1 rounded text-[10px] md:text-sm font-bold uppercase tracking-widest mb-4 md:mb-6 inline-block">Asesoría, Diseño e Impresión</span>
+            <h1 class="text-3xl md:text-7xl font-extrabold leading-tight mb-4 md:mb-6">
+                Impacto Visual a <br class="hidden md:block"> <span class="text-avanza-red">Gran Escala</span>
+            </h1>
+            <p class="text-base md:text-2xl text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto md:mx-0">
+                Diseño, impresión e instalación de fachadas, pantallas LED y avisos publicitarios para eventos y locales comerciales.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                <a href="#contacto" class="bg-avanza-red text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-red-700 transition shadow-lg text-center">
+                    Solicitar Cotización
+                </a>
+                <a href="#galeria" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-white/20 transition text-center">
+                    Ver Portafolio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Especialidades -->
+    <section id="especialidades" class="py-12 md:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl md:text-5xl font-extrabold mb-4">Soluciones de <span class="text-avanza-red">Gran Impacto</span></h2>
+                <div class="w-16 md:w-20 h-1 bg-avanza-red mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 md:h-56">
+                        <img src="https://github.com/avanzaperu-sistemas/imagen/blob/main/2eee510b-a9fe-46ad-b32f-1a7a83a52adb.jpg?raw=true" alt="Fachadas" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <span class="text-avanza-red font-bold text-[10px] md:text-xs uppercase">Retail & locales</span>
+                        <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3">Fachadas & Cierres</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-6">Transformamos tu tienda con fachadas impresas de alto impacto.</p>
+                        <a href="https://wa.me/51904499441" class="text-avanza-red font-bold hover:underline flex items-center text-sm">
+                            Explorar Solución <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 md:h-56">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=80&w=800" alt="Pantallas LED" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <span class="text-avanza-red font-bold text-[10px] md:text-xs uppercase">Impacto Audiovisual</span>
+                        <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3">Pantallas LED</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-6">Alquiler e instalación de pantallas LED de alta definición.</p>
+                        <a href="https://wa.me/51904499441" class="text-avanza-red font-bold hover:underline flex items-center text-sm">
+                            Ver Catálogo <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 md:h-56">
+                        <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&q=80&w=800" alt="Avisos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <span class="text-avanza-red font-bold text-[10px] md:text-xs uppercase">Publicidad Exterior</span>
+                        <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3">Avisos & Vallas</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-6">Diseño y montaje de estructuras publicitarias de gran visibilidad.</p>
+                        <a href="https://wa.me/51904499441" class="text-avanza-red font-bold hover:underline flex items-center text-sm">
+                            Solicitar Diseño <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnología -->
+    <section id="tecnologia" class="py-12 md:py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800" alt="Maquinaria" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+            </div>
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h2 class="text-2xl md:text-4xl font-extrabold mb-4 md:mb-6">Calidad que <span class="text-avanza-red">Marca la Diferencia</span></h2>
+                <p class="text-sm md:text-lg text-gray-600 mb-6">
+                    Utilizamos tecnología de impresión UV de última generación para garantizar colores vibrantes y resistencia a la intemperie.
+                </p>
+                <div class="space-y-4 inline-block text-left">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-avanza-red mr-3"></i>
+                        <span class="text-sm md:text-base">Asesoría Técnica Especializada</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-avanza-red mr-3"></i>
+                        <span class="text-sm md:text-base">Instalación en Todo el Perú</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-12 md:py-20 bg-avanza-dark text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center md:text-left mb-10">
+                <h2 class="text-2xl md:text-5xl font-extrabold mb-4">Nuestros <span class="text-avanza-red">Proyectos</span></h2>
+                <p class="text-gray-400 text-sm md:text-base">Calidad comprobada en cada instalación.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded-lg" alt="P1">
+                <img src="https://github.com/avanzaperu-sistemas/imagen/blob/main/Gemini_Generated_Image_3deuzw3deuzw3deu.png?raw=true" class="w-full h-64 object-cover rounded-lg" alt="P2">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded-lg" alt="P3">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded-lg" alt="P4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-12 md:py-20 bg-gray-50 px-4">
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-avanza-red p-8 md:p-12 text-white">
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-4">¡Contáctanos!</h2>
+                <p class="mb-8 opacity-80 text-sm md:text-base">Presupuestos a medida según tus necesidades.</p>
+                <div class="space-y-4">
+                    <p class="text-sm font-bold"><i class="fas fa-phone-alt mr-2"></i> 904 499 441</p>
+                    <p class="text-sm font-bold"><i class="fas fa-envelope mr-2"></i> informes@avanzaperu.com</p>
+                </div>
+            </div>
+            <div class="md:w-2/3 p-8 md:p-12">
+                <form id="contactForm" class="space-y-4">
+                    <input type="text" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-avanza-red" placeholder="Nombre / Empresa" required>
+                    <input type="email" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-avanza-red" placeholder="Correo electrónico" required>
+                    <select class="w-full p-3 border rounded-lg outline-none bg-white">
+                        <option>Fachadas & Cierres</option>
+                        <option>Pantallas LED</option>
+                        <option>Avisos Publicitarios</option>
+                    </select>
+                    <textarea rows="3" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-avanza-red" placeholder="Detalles del proyecto..."></textarea>
+                    <button type="submit" class="w-full bg-avanza-red text-white py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-red-700 transition">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página Restaurado y Corregido -->
+    <footer class="bg-avanza-dark text-white pt-12 md:pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <!-- Columna 1: Logo e Info -->
+            <div class="flex flex-col items-center md:items-start">
+                <img src="https://github.com/avanzaperu-sistemas/imagen/blob/main/logo_avanza_peru_footer.png?raw=true" alt="Logo Footer" class="w-48 mb-4">
+                <p class="text-gray-500 text-xs md:text-sm max-w-xs">Especialistas en gran formato e impacto visual comercial en todo el Perú.</p>
+            </div>
+            
+            <!-- Columna 2: Enlaces (Restaurados) -->
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Navegación</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#especialidades" class="hover:text-white transition">Servicios</a></li>
+                    <li><a href="#tecnologia" class="hover:text-white transition">Tecnología</a></li>
+                    <li><a href="#galeria" class="hover:text-white transition">Galería</a></li>
+                    <li><a href="#contacto" class="hover:text-white transition">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes Sociales (Corregidas) -->
+            <div class="flex flex-col items-center md:items-end">
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Síguenos</h4>
+                <div class="flex space-x-6 text-2xl md:text-xl">
+                    <a href="#" class="text-gray-400 hover:text-white transition" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <!-- Icono corregido para X (Twitter) -->
+                    <a href="#" class="text-gray-400 hover:text-white transition" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-600 text-[10px] md:text-xs">
+            &copy; 2024 Avanza Perú. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/51904499441" class="floating-whatsapp bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition animate-bounce">
+        <i class="fab fa-whatsapp text-2xl md:text-3xl"></i>
+    </a>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias! Tu mensaje ha sido enviado correctamente.');
+        });
+    </script>
+</body>
+</html>
